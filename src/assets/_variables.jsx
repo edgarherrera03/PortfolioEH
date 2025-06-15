@@ -1,0 +1,9 @@
+export const backgroundDarkBlue = "#1B2542";
+export const buttonBackground = "#233C95";
+export const colorFontLightBlue = "#B3BFFF";
+export const backgroundDarkBlack = "#1D1D1D";
+export const backgroundRed = "#910000";
+export const colorBorderLight = "#BEBEBE";
+export const colorProgressSkillBar = "#345498";
+export const BackgroundLight = "#F5F3F3";
+export const colorProgressSkillBarClear = "#4771cb";
