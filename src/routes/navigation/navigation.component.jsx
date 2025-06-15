@@ -21,7 +21,7 @@ const Navigation = () => {
 			<NavigationContainer>
 				<PhotoContainer
 					style={{
-						backgroundImage: `url(https://i.ibb.co/wzTy8xN/photo-cv.jpg)`,
+						backgroundImage: `url(https://i.ibb.co/Rpb3r3RC/logo-ehs.png)`,
 					}}
 					onClick={scrollToTop}
 				/>

@@ -33,7 +33,7 @@ const projects = [
 		id: 4,
 		languageType: "c",
 		title: "Web Development - Portfolio",
-		link: "https://github.com/edgarherrera03/portfolio",
+		link: "https://github.com/edgarherrera03/PortfolioEH",
 	},
 	{ id: 5, languageType: "cpp", title: "VBA Development" },
 ];
