@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 import Button from "../../components/button/button.component";
 import {
 	ContactContainer,
@@ -11,23 +13,46 @@ import {
 } from "./contact.styles";
 
 const Contact = () => {
+	const formRef = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_hwzuanb", // Replace with your EmailJS service ID
+				"template_yuzlled", // Replace with your EmailJS template ID
+				formRef.current,
+				"Ylsb6ADhFIpuGs0Bk" // Replace with your EmailJS public key (or user ID)
+			)
+			.then(
+				(result) => {
+					console.log("Message sent:", result.text);
+					formRef.current.reset();
+				},
+				(error) => {
+					console.error("Email error:", error.text);
+				}
+			);
+	};
+
 	return (
 		<div id="contact">
 			<ContactContainer>
 				<FormContainer>
 					<ScreenHeader>
-						<div class="screen-header-left">
-							<div class="screen-header-button close"></div>
-							<div class="screen-header-button maximize"></div>
-							<div class="screen-header-button minimize"></div>
+						<div className="screen-header-left">
+							<div className="screen-header-button close"></div>
+							<div className="screen-header-button maximize"></div>
+							<div className="screen-header-button minimize"></div>
 						</div>
-						<div class="screen-header-right">
-							<div class="screen-header-ellipsis"></div>
-							<div class="screen-header-ellipsis"></div>
-							<div class="screen-header-ellipsis"></div>
+						<div className="screen-header-right">
+							<div className="screen-header-ellipsis"></div>
+							<div className="screen-header-ellipsis"></div>
+							<div className="screen-header-ellipsis"></div>
 						</div>
 					</ScreenHeader>
-					<Form>
+					<Form ref={formRef} onSubmit={sendEmail}>
 						<FormTitle>
 							<span>CONTACT</span>
 							<span>
@@ -60,4 +85,5 @@ const Contact = () => {
 		</div>
 	);
 };
+
 export default Contact;
