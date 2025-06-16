@@ -117,6 +117,12 @@ export const SocialMedia = styled.div`
 		transform: scale(1.02);
 		color: ${backgroundDarkBlack};
 	}
+
+	@media (max-width: 515px) {
+		span {
+			font-size: 0.8rem;
+		}
+	}
 `;
 
 export const LanguageContainer = styled.div`
@@ -129,7 +135,8 @@ export const LanguageContainer = styled.div`
 	@media (max-width: 1080px) {
 		flex-direction: column;
 		align-items: center;
-		padding: 0 20px;
+		padding: 0 0.1rem;
+		gap: 1rem;
 	}
 `;
 
@@ -159,8 +166,11 @@ export const LanguageText = styled.div`
 	}
 
 	@media (max-width: 1080px) {
-		width: 90%;
+		width: 95%;
 		margin-top: 15px;
+		p {
+			line-height: 1.5rem;
+		}
 	}
 `;
 

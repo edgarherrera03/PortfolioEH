@@ -33,10 +33,10 @@ export const BaseButton = styled.button`
 	}
 
 	@media (max-width: 515px) {
-		width: 150px;
-		height: 35px;
-		font-size: 9px;
-		line-height: 35px;
+		width: 10.5rem;
+		height: 2.4rem;
+		font-size: 0.65rem;
+		line-height: 2.4rem;
 	}
 `;
 
@@ -91,7 +91,7 @@ export const WorksButton = styled(BaseButton)`
 	@media (max-width: 515px) {
 		width: 130px;
 		height: 35px;
-		font-size: 9px;
+		font-size: 0.725rem;
 		line-height: 35px;
 	}
 `;

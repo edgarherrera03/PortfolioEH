@@ -43,15 +43,15 @@ h1 {
 h2 {
 	font-size: 40px;
 	@media (max-width: 900px) {
-		font-size: 30px;
+		font-size: 1.9rem;
 	}
 
 	@media (max-width: 685px) {
-		font-size: 22px;
+		font-size: 1.6rem;
 	}
 
 	@media (max-width: 515px) {
-		font-size: 15px;
+		font-size: 1.4rem;
 	}
 }
 h3 {
