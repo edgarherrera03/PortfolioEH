@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
-	LollierExperience,
-	PatheExperience,
-	BdeExperience,
+	BaseExperience,
 	CardWrapper,
 	CardInner,
 	CardFront,
@@ -11,21 +9,7 @@ import {
 
 import Button from "../button/button.component";
 
-export const EXPERIENCES_CARD = {
-	lollier: "Lollier Ingénierie",
-	pathe: "Pathé Cinéma",
-	bde: "BDE EMSE CGCP",
-};
-
-const getExperience = (experienceCard) =>
-	({
-		[EXPERIENCES_CARD.lollier]: LollierExperience,
-		[EXPERIENCES_CARD.pathe]: PatheExperience,
-		[EXPERIENCES_CARD.bde]: BdeExperience,
-	}[experienceCard]);
-
 const ExperienceCard = ({ experienceCard, title, description, imgURL }) => {
-	const CustomExperience = getExperience(experienceCard);
 	const [flipped, setFlipped] = useState(false);
 	const [isVisible, setIsVisible] = useState(false);
 	const ref = useRef(null);
@@ -46,7 +30,7 @@ const ExperienceCard = ({ experienceCard, title, description, imgURL }) => {
 	}, []);
 
 	return (
-		<CustomExperience ref={ref} className={isVisible ? "visible" : ""}>
+		<BaseExperience ref={ref} className={isVisible ? "visible" : ""}>
 			<CardWrapper className={isVisible ? "slide-up" : ""}>
 				<CardInner $flipped={flipped}>
 					<CardFront>
@@ -68,7 +52,7 @@ const ExperienceCard = ({ experienceCard, title, description, imgURL }) => {
 					</CardBack>
 				</CardInner>
 			</CardWrapper>
-		</CustomExperience>
+		</BaseExperience>
 	);
 };
 

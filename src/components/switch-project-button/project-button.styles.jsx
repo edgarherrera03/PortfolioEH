@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { buttonBackground, BackgroundLight } from "../../assets/_variables";
 export const BaseButton = styled.button`
 	margin: 20px;
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 	border: none;
 	cursor: pointer;
 	display: flex;
@@ -12,7 +12,7 @@ export const BaseButton = styled.button`
 	border-radius: 30px;
 	border: solid ${buttonBackground};
 	& i {
-		font-size: 20px;
+		font-size: 1.2rem;
 		color: ${buttonBackground};
 		transition: transform 0.2s ease;
 	}
@@ -28,6 +28,14 @@ export const BaseButton = styled.button`
 	&:disabled {
 		cursor: not-allowed;
 		opacity: 0.3;
+	}
+
+	@media (max-width: 768px) {
+		width: 2.2rem;
+		height: 2.2rem;
+		& i {
+			font-size: 1rem;
+		}
 	}
 `;
 

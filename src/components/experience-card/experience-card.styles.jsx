@@ -11,10 +11,6 @@ export const BaseExperience = styled.div`
 	perspective: 1000px;
 `;
 
-export const LollierExperience = styled(BaseExperience)``;
-export const PatheExperience = styled(BaseExperience)``;
-export const BdeExperience = styled(BaseExperience)``;
-
 const slideUp = keyframes`
 	from {
 		transform: translateY(100px);
@@ -27,8 +23,8 @@ const slideUp = keyframes`
 `;
 
 export const CardWrapper = styled.div`
-	width: 350px;
-	height: 550px;
+	width: 22rem;
+	height: 35rem;
 	cursor: pointer;
 	opacity: 0;
 	transform: translateY(100px);
@@ -36,6 +32,20 @@ export const CardWrapper = styled.div`
 
 	&.slide-up {
 		animation: ${slideUp} 0.8s ease forwards;
+	}
+
+	@media (max-width: 1200px) {
+		width: 18rem;
+		height: 31rem;
+	}
+
+	@media (max-width: 1000px) {
+		width: 22rem;
+		height: 35rem;
+	}
+	@media (max-width: 515px) {
+		width: 18rem;
+		height: 31rem;
 	}
 `;
 
@@ -72,8 +82,8 @@ export const CardFront = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 350px;
-		height: 350px;
+		width: 22rem;
+		height: 22rem;
 		background-color: white;
 	}
 
@@ -91,6 +101,27 @@ export const CardFront = styled.div`
 		font-size: 16px;
 		margin-bottom: 35px;
 	}
+
+	@media (max-width: 1200px) {
+		& div {
+			width: 18rem;
+			height: 18rem;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		& div {
+			width: 22rem;
+			height: 22rem;
+		}
+	}
+
+	@media (max-width: 515px) {
+		& div {
+			width: 18rem;
+			height: 18rem;
+		}
+	}
 `;
 
 export const CardBack = styled.div`
@@ -98,7 +129,7 @@ export const CardBack = styled.div`
 	transform: rotateY(180deg);
 
 	.description-box {
-		max-height: 90%; /* adjust as needed */
+		max-height: 90%;
 		overflow-y: auto;
 		width: 100%;
 		height: 100%;

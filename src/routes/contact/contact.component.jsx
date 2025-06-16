@@ -61,7 +61,3 @@ const Contact = () => {
 	);
 };
 export default Contact;
-<div class="app-title">
-	<span>CONTACT</span>
-	<span>US</span>
-</div>;

@@ -26,9 +26,24 @@ export const BaseProject = styled.div`
 		transform: scale(1.03);
 		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	}
+
+	@media (max-width: 1300px) {
+		width: 300px;
+		height: 400px;
+	}
+
+	@media (max-width: 768px) {
+		width: 350px;
+		height: 470px;
+	}
+
+	@media (max-width: 500px) {
+		width: 225px;
+		height: 325px;
+	}
 `;
 
-export const PythonProject = styled(BaseProject)`
+export const HospitalProject = styled(BaseProject)`
 	background-image: url("https://i.ibb.co/215byFYq/Hospital-management.jpg");
 
 	&::before {
@@ -45,13 +60,13 @@ export const PythonProject = styled(BaseProject)`
 	}
 `;
 
-export const ReactProject = styled(BaseProject)`
+export const AutomationProject = styled(BaseProject)`
 	background-image: url("https://i.ibb.co/rfFL8ZnP/Automation-python.jpg");
 `;
-export const HtmlProject = styled(BaseProject)`
+export const CryptoProject = styled(BaseProject)`
 	background-image: url("https://i.ibb.co/TD0RR0jL/encryption.png");
 `;
-export const CProject = styled(BaseProject)`
+export const PortfolioProject = styled(BaseProject)`
 	background-image: url("https://i.ibb.co/KpxQ2sZd/portfolio.png");
 	&::before {
 		content: "";
@@ -67,7 +82,7 @@ export const CProject = styled(BaseProject)`
 	}
 `;
 
-export const CppProject = styled(BaseProject)`
+export const VbaProject = styled(BaseProject)`
 	background-image: url("https://i.ibb.co/Z17SG8BH/excel.png");
 	&::before {
 		content: "";
@@ -82,8 +97,3 @@ export const CppProject = styled(BaseProject)`
 		z-index: 1;
 	}
 `;
-
-// https://i.ibb.co/TD0RR0jL/encryption.png
-// https://i.ibb.co/rfFL8ZnP/Automation-python.jpg
-// https://i.ibb.co/KpxQ2sZd/portfolio.png
-// https://i.ibb.co/Z17SG8BH/excel.png

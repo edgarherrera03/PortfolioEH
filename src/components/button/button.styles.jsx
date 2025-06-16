@@ -24,6 +24,20 @@ export const BaseButton = styled.button`
 	display: flex;
 	justify-content: center;
 	border-radius: 5px;
+
+	@media (max-width: 768px) {
+		width: 180px;
+		height: 40px;
+		font-size: 11px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 515px) {
+		width: 150px;
+		height: 35px;
+		font-size: 9px;
+		line-height: 35px;
+	}
 `;
 
 export const ContactButton = styled(BaseButton)`
@@ -65,5 +79,19 @@ export const WorksButton = styled(BaseButton)`
 
 	&:hover::before {
 		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		width: 160px;
+		height: 40px;
+		font-size: 11px;
+		line-height: 40px;
+	}
+
+	@media (max-width: 515px) {
+		width: 130px;
+		height: 35px;
+		font-size: 9px;
+		line-height: 35px;
 	}
 `;

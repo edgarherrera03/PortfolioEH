@@ -12,23 +12,39 @@ export const ContactContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-top: 100px;
-	/* background-color: ${colorProgressSkillBarClear}; */
+	background-color: ${colorProgressSkillBarClear};
 	border-top: 1px solid ${colorBorderLight};
 `;
 
 export const FormContainer = styled.div`
 	background: linear-gradient(to bottom, #1d1d1d 0%, #1b2542 100%);
-	margin: 150px;
-	width: 1000px;
+	margin: 10rem;
+	width: 60rem;
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+	@media (max-width: 1050px) {
+		width: 45rem;
+	}
+
+	@media (max-width: 768px) {
+		width: 35rem;
+	}
+
+	@media (max-width: 590px) {
+		width: 20rem;
+	}
 `;
 
 export const Form = styled.form`
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 1050px) {
+		flex-direction: column;
+	}
 `;
 
 export const FormTitle = styled.div`
@@ -37,10 +53,26 @@ export const FormTitle = styled.div`
 	padding: 70px 0 0 50px;
 	& span {
 		color: ${colorProgressSkillBarClear};
-		font-size: 40px;
+		font-size: 3rem;
 		font-weight: 700;
 		font-family: "Montserrat", sans-serif;
 		letter-spacing: 1.5px;
+	}
+	@media (max-width: 1050px) {
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		& span {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 590px) {
+		& span {
+			font-size: 1.5rem;
+		}
 	}
 `;
 
@@ -49,7 +81,25 @@ export const FormTextAreas = styled.div`
 	flex-flow: column;
 	padding: 70px 50px 20px 50px;
 	textarea {
-		height: 250px;
+		height: 15rem;
+	}
+
+	@media (max-width: 1050px) {
+		& textarea {
+			height: 12rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		& textarea {
+			height: 10rem;
+		}
+	}
+
+	@media (max-width: 590px) {
+		& textarea {
+			height: 8rem;
+		}
 	}
 `;
 export const ScreenHeader = styled.div`
@@ -99,6 +149,13 @@ export const InfoSenderContainer = styled.div`
 	justify-content: space-between;
 	input {
 		width: 49%;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		input {
+			width: 100%;
+		}
 	}
 `;
 export const ButtonContainer = styled.div`

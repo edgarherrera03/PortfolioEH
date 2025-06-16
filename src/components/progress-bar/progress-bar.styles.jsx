@@ -14,6 +14,18 @@ export const ProgressContainer = styled.div`
 		color: ${backgroundDarkBlue};
 		margin-left: 15px;
 		font-weight: 500;
+		font-size: 1.2rem;
+		@media (max-width: 900px) {
+			font-size: 1.1rem;
+		}
+
+		@media (max-width: 685px) {
+			font-size: 1rem;
+		}
+
+		@media (max-width: 515px) {
+			font-size: 0.9rem;
+		}
 	}
 `;
 
@@ -23,6 +35,18 @@ export const ProgressBarContainer = styled.div`
 	height: 10px;
 	border-radius: 5px;
 	background-color: ${colorBorderLight};
+
+	@media (max-width: 900px) {
+		height: 9px;
+	}
+
+	@media (max-width: 685px) {
+		height: 8.5px;
+	}
+
+	@media (max-width: 515px) {
+		height: 8px;
+	}
 `;
 
 const growBar = (width) => keyframes`
@@ -55,5 +79,17 @@ export const ProgressBarFilledLanguage = styled.div`
 	&:hover {
 		transform: scale(1.01);
 		background-color: ${backgroundDarkBlue};
+	}
+
+	@media (max-width: 900px) {
+		height: 9px;
+	}
+
+	@media (max-width: 685px) {
+		height: 8px;
+	}
+
+	@media (max-width: 515px) {
+		height: 7px;
 	}
 `;

@@ -1,13 +1,18 @@
-import { FooterContainer } from "./footer.component";
+import styled from "styled-components";
+import { backgroundDarkBlue, BackgroundLight } from "../../assets/_variables";
 
-const Footer = () => {
-	return (
-		<FooterContainer>
-			<p>
-				&#169; Copyright - <strong>Edgar Herrera Sansivirini</strong> - 2025
-			</p>
-		</FooterContainer>
-	);
-};
+export const FooterContainer = styled.div`
+	width: 100%;
+	height: 6em;
+	background-color: ${backgroundDarkBlue};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& p {
+		color: ${BackgroundLight};
+	}
 
-export default Footer;
+	@media (max-width: 768px) {
+		height: 4em;
+	}
+`;

@@ -6,7 +6,7 @@ import Contact from "./routes/contact/contact.component";
 import About from "./routes/about/about.component";
 import Portfolio from "./routes/portfolio/portfolio.component";
 import Experiences from "./routes/experiences/experiences.component";
-import Footer from "./routes/footer/footer.styles";
+import Footer from "./routes/footer/footer.component";
 const App = () => {
 	return (
 		<>

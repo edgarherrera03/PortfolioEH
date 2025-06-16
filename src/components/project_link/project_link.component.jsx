@@ -1,26 +1,26 @@
 import {
-	PythonProject,
-	ReactProject,
-	HtmlProject,
-	CProject,
-	CppProject,
+	HospitalProject,
+	AutomationProject,
+	CryptoProject,
+	PortfolioProject,
+	VbaProject,
 } from "./project_link.styles";
 
 export const LANGUAGE_CLASSES = {
-	python: "python",
-	react: "react",
-	html: "html",
-	c: "c",
-	cpp: "cpp",
+	hospital: "hospital",
+	automation: "automation",
+	crypto: "crypto",
+	portfolio: "portfolio",
+	vba: "vba",
 };
 
 const getLanguage = (languageType) =>
 	({
-		[LANGUAGE_CLASSES.python]: PythonProject,
-		[LANGUAGE_CLASSES.react]: ReactProject,
-		[LANGUAGE_CLASSES.html]: HtmlProject,
-		[LANGUAGE_CLASSES.c]: CProject,
-		[LANGUAGE_CLASSES.cpp]: CppProject,
+		[LANGUAGE_CLASSES.hospital]: HospitalProject,
+		[LANGUAGE_CLASSES.automation]: AutomationProject,
+		[LANGUAGE_CLASSES.crypto]: CryptoProject,
+		[LANGUAGE_CLASSES.portfolio]: PortfolioProject,
+		[LANGUAGE_CLASSES.vba]: VbaProject,
 	}[languageType]);
 
 const ProjectLink = ({ languageType, title, onClick }) => {

@@ -1,6 +1,13 @@
 import ExperienceCard from "../../components/experience-card/experience-card.component";
 import TitleSection from "../../components/title-section/title-section.component";
-import { ExperiencesContainer, Experience } from "./experiences.styles";
+import {
+	ExperiencesContainer,
+	Experience,
+	ScrollWrapper,
+	ScrollButtons,
+} from "./experiences.styles";
+import ProjectButton from "../../components/switch-project-button/project-button.component";
+import { useRef } from "react";
 
 const experiences = [
 	{
@@ -39,21 +46,39 @@ const experiences = [
 ];
 
 const Experiences = () => {
+	const scrollRef = useRef();
+
+	const scroll = (direction) => {
+		if (!scrollRef.current) return;
+		const distance = 300;
+		scrollRef.current.scrollBy({
+			left: direction === "right" ? distance : -distance,
+			behavior: "smooth",
+		});
+	};
+
 	return (
 		<div id="experiences">
 			<ExperiencesContainer>
 				<TitleSection>Experiences</TitleSection>
-				<Experience>
-					{experiences.map((experience) => (
-						<ExperienceCard
-							key={experience.company}
-							experienceCard={experience.company}
-							title={experience.title}
-							description={experience.description}
-							imgURL={experience.imgURL}
-						/>
-					))}
-				</Experience>
+
+				<ScrollWrapper>
+					<Experience ref={scrollRef}>
+						{experiences.map((experience) => (
+							<ExperienceCard
+								key={experience.company}
+								experienceCard={experience.company}
+								title={experience.title}
+								description={experience.description}
+								imgURL={experience.imgURL}
+							/>
+						))}
+					</Experience>
+				</ScrollWrapper>
+				<ScrollButtons>
+					<ProjectButton buttonType="left" onClick={() => scroll("left")} />
+					<ProjectButton buttonType="right" onClick={() => scroll("right")} />
+				</ScrollButtons>
 			</ExperiencesContainer>
 		</div>
 	);

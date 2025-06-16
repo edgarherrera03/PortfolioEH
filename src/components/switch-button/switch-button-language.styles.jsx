@@ -17,6 +17,15 @@ export const StyledSwitchButton = styled.button`
 	width: 70px;
 	height: 35px;
 	position: relative;
+
+	@media (max-width: 768px) {
+		width: 60px;
+		height: 30px;
+	}
+	@media (max-width: 515px) {
+		width: 55px;
+		height: 25px;
+	}
 `;
 
 export const LanguageSelector = styled.div`
@@ -31,6 +40,16 @@ export const LanguageSelector = styled.div`
 	left: ${({ toggled }) => (toggled ? "37px" : "4px")};
 	top: 50%;
 	transform: translateY(-50%);
+
+	@media (max-width: 768px) {
+		width: 25px;
+		height: 25px;
+		left: ${({ toggled }) => (toggled ? "31px" : "4px")};
+	}
+	@media (max-width: 515px) {
+		width: 20px;
+		height: 20px;
+	}
 `;
 
 export const Label = styled.span`
@@ -44,4 +63,11 @@ export const Label = styled.span`
 
 	left: ${({ position }) => (position === "left" ? "10px" : "auto")};
 	right: ${({ position }) => (position === "right" ? "10px" : "auto")};
+
+	@media (max-width: 768px) {
+		font-size: 10px;
+	}
+	@media (max-width: 515px) {
+		font-size: 9px;
+	}
 `;

@@ -5,15 +5,25 @@ export const AboutContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 600px;
+	height: auto;
+	margin: 100px 0 50px 0;
+	@media (max-width: 1380px) {
+		flex-direction: column;
+	}
 `;
 export const ProfilePhotoContainer = styled.div`
 	width: 350px;
 	height: 350px;
 	background-size: cover;
 	background-position: center;
-	margin-right: 40px;
+	margin: 0 40px 100px 0;
 	border-radius: 180px;
+
+	@media (max-width: 768px) {
+		width: 300px;
+		height: 300px;
+		margin-right: 0;
+	}
 `;
 export const TextAboutMeContainer = styled.div`
 	display: flex;
@@ -23,15 +33,32 @@ export const TextAboutMeContainer = styled.div`
 	font-family: "Montserrat", sans-serif;
 	span {
 		margin-bottom: 5px;
+		font-size: 1.3rem;
+		@media (max-width: 900px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 685px) {
+			font-size: 1rem;
+		}
+
+		@media (max-width: 515px) {
+			font-size: 0.9rem;
+		}
 	}
 	p {
-		line-height: 25px;
-		margin-bottom: 15px;
+		line-height: 2rem;
+		margin-bottom: 1rem;
+		margin-right: 1rem;
 		color: ${backgroundDarkBlue};
 		& span {
 			font-weight: 800;
 			color: ${buttonBackground};
 		}
+	}
+
+	@media (max-width: 1380px) {
+		width: 80%;
 	}
 `;
 
@@ -41,6 +68,11 @@ export const PersonalInformationContainer = styled.div`
 	grid-template-rows: 1fr 1fr;
 	width: auto;
 	color: ${backgroundDarkBlue};
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 export const Info = styled.div`
@@ -90,29 +122,53 @@ export const SocialMedia = styled.div`
 export const LanguageContainer = styled.div`
 	display: flex;
 	justify-content: center;
-	gap: 3rem;
+	gap: 4rem;
 	width: 100%;
+	padding: 0 5rem;
+	margin-top: 40px;
+	@media (max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 0 20px;
+	}
 `;
 
 export const LanguageText = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 35%;
+	width: 80%;
 	color: ${backgroundDarkBlue};
 
 	span {
-		font-size: 25px;
+		font-size: 1.6rem;
 		font-weight: 600;
+		@media (max-width: 900px) {
+			font-size: 1.4rem;
+		}
+
+		@media (max-width: 685px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 515px) {
+			font-size: 1.15rem;
+		}
 	}
 	p {
-		line-height: 1.6rem;
+		line-height: 2rem;
+	}
+
+	@media (max-width: 1080px) {
+		width: 90%;
+		margin-top: 15px;
 	}
 `;
 
-export const Languages = styled.div``;
+export const Languages = styled.div`
+	width: 90%;
+`;
 
 export const Language = styled.div`
-	width: 700px;
 	color: ${backgroundDarkBlue};
 	p {
 		margin: 5px 0;

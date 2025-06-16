@@ -58,7 +58,6 @@ const Home = () => {
 			style={{
 				position: "relative",
 				width: "100%",
-				height: "100vh",
 				overflow: "hidden",
 				backgroundColor: "#0f0f0f",
 			}}>
@@ -81,7 +80,9 @@ const Home = () => {
 			<IntroContainer>
 				<TitleContainer>
 					<h1>Hi, I'm Edgar.</h1>
-					<h2 style={{ display: "flex", alignItems: "center" }}>
+					<span
+						className="ChangingTitle"
+						style={{ display: "flex", alignItems: "center" }}>
 						I am a&nbsp;
 						<TypeAnimation
 							sequence={[
@@ -96,7 +97,7 @@ const Home = () => {
 							repeat={Infinity}
 							style={{ color: "#34eb7d", display: "inline-block" }} // customize color here
 						/>
-					</h2>
+					</span>
 				</TitleContainer>
 				<Button buttonType="base" onClick={handleDownload}>
 					Download Resume
