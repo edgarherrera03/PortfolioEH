@@ -19,7 +19,7 @@ export const ScrollButtons = styled.div`
 export const ScrollWrapper = styled.div`
 	width: 100%;
 	overflow: hidden;
-
+	height: 37rem;
 	@media (max-width: 1000px) {
 		width: 22rem;
 		height: 35rem;
