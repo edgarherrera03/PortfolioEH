@@ -26,17 +26,11 @@ export const BaseButton = styled.button`
 	border-radius: 5px;
 
 	@media (max-width: 768px) {
-		width: 180px;
-		height: 40px;
-		font-size: 11px;
-		line-height: 40px;
-	}
-
-	@media (max-width: 515px) {
-		width: 10.5rem;
-		height: 2.4rem;
-		font-size: 0.65rem;
-		line-height: 2.4rem;
+		width: 13rem;
+		height: 2.6rem;
+		font-size: 0.9rem;
+		line-height: 2.6rem;
+		padding: 0 1rem 0 1rem;
 	}
 `;
 
@@ -84,14 +78,14 @@ export const WorksButton = styled(BaseButton)`
 	@media (max-width: 768px) {
 		width: 160px;
 		height: 40px;
-		font-size: 11px;
+		font-size: 0.85rem;
 		line-height: 40px;
 	}
 
 	@media (max-width: 515px) {
-		width: 130px;
-		height: 35px;
-		font-size: 0.725rem;
-		line-height: 35px;
+		width: 10rem;
+		height: 2.5rem;
+		font-size: 0.85rem;
+		line-height: 2.5rem;
 	}
 `;

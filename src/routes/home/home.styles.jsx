@@ -12,12 +12,10 @@ export const IntroContainer = styled.div`
 	padding: 0 20px;
 
 	@media (max-width: 768px) {
-		height: 80vh;
 		padding: 40px 20px;
 	}
 
 	@media (max-width: 515px) {
-		height: 70vh;
 		padding: 40px 20px;
 	}
 `;

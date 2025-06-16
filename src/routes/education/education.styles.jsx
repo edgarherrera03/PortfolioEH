@@ -27,7 +27,7 @@ export const DegreeContainer = styled.div`
 	}
 
 	@media (max-width: 600px) {
-		padding: 1.5rem 3rem;
+		padding: 1.5rem 0.2rem 1.5rem 1rem;
 	}
 `;
 

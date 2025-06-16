@@ -7,9 +7,11 @@ import About from "./routes/about/about.component";
 import Portfolio from "./routes/portfolio/portfolio.component";
 import Experiences from "./routes/experiences/experiences.component";
 import Footer from "./routes/footer/footer.component";
+import NotchBackground from "./routes/notch/notch.component";
 const App = () => {
 	return (
 		<>
+			<NotchBackground />
 			<Navigation />
 			<Home />
 			<About />

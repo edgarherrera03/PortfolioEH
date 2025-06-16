@@ -58,7 +58,7 @@ export const TextAboutMeContainer = styled.div`
 	}
 
 	@media (max-width: 1380px) {
-		width: 80%;
+		width: 90%;
 	}
 `;
 
@@ -150,15 +150,15 @@ export const LanguageText = styled.div`
 		font-size: 1.6rem;
 		font-weight: 600;
 		@media (max-width: 900px) {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 		}
 
 		@media (max-width: 685px) {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 		}
 
 		@media (max-width: 515px) {
-			font-size: 1.15rem;
+			font-size: 1.3rem;
 		}
 	}
 	p {
@@ -176,6 +176,9 @@ export const LanguageText = styled.div`
 
 export const Languages = styled.div`
 	width: 90%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
 `;
 
 export const Language = styled.div`

@@ -23,8 +23,8 @@ export const StyledSwitchButton = styled.button`
 		height: 30px;
 	}
 	@media (max-width: 515px) {
-		width: 3.4rem;
-		height: 1.6rem;
+		width: 3.6rem;
+		height: 1.9rem;
 	}
 `;
 
@@ -46,10 +46,6 @@ export const LanguageSelector = styled.div`
 		height: 1.5rem;
 		left: ${({ toggled }) => (toggled ? "31px" : "4px")};
 	}
-	@media (max-width: 515px) {
-		width: 1.3rem;
-		height: 1.3rem;
-	}
 `;
 
 export const Label = styled.span`
@@ -57,7 +53,7 @@ export const Label = styled.span`
 	top: 50%;
 	transform: translateY(-50%);
 	color: white;
-	font-size: 12px;
+	font-size: 0.9rem;
 	font-weight: 600;
 	pointer-events: none;
 
@@ -65,7 +61,7 @@ export const Label = styled.span`
 	right: ${({ position }) => (position === "right" ? "10px" : "auto")};
 
 	@media (max-width: 768px) {
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 	@media (max-width: 515px) {
 		font-size: 0.7rem;
