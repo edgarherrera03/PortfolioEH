@@ -6,6 +6,7 @@ const NotchBackground = styled.div`
 	top: 0;
 	left: 0;
 	right: 0;
+	width: 100%;
 	height: env(safe-area-inset-top);
 	background-color: ${backgroundDarkBlue};
 	z-index: 9999;
