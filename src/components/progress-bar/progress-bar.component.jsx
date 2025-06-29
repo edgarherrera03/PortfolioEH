@@ -23,7 +23,7 @@ const getSkill = (skillType) => {
 const ProgressBar = ({ skillType, percentage, delay }) => {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
-		threshold: 0.3, // Adjust as needed
+		threshold: 0.3,
 	});
 
 	const CustomSkill = getSkill(skillType);

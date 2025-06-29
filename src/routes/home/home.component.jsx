@@ -10,22 +10,21 @@ const Home = () => {
 	const { language } = useLanguage();
 	const squareRef = useRef(null);
 	const containerRef = useRef(null);
-	const handleDownload = async () => {
-		const fileUrl =
+	const handleDownload = () => {
+		const fileId =
 			language === "fr"
-				? "https://i.ibb.co/Kp7gM8Cb/Edgar-Herrera-CV-FR.jpg"
-				: "https://i.ibb.co/N2SQWQFj/Edgar-Herrera-CV.jpg";
-		const response = await fetch(fileUrl);
-		const blob = await response.blob();
-		const url = URL.createObjectURL(blob);
+				? "13I9Vj7qu_ye2SGMq5mwdguUX6BbkXFvi"
+				: "1g-wY0FJgW01_Km8ZaiC2ndfbE9tdTVQy";
+
+		const fileUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
 		const a = document.createElement("a");
-		a.href = url;
-		a.download = "CV_Edgar_Herrera.jpg";
+		a.href = fileUrl;
+		a.target = "_blank";
 		a.style.display = "none";
 		document.body.appendChild(a);
 		a.click();
-		window.URL.revokeObjectURL(url);
+		document.body.removeChild(a);
 	};
 
 	useEffect(() => {

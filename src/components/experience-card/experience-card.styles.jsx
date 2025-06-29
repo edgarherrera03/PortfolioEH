@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { backgroundDarkBlue } from "../../assets/_variables";
 
-// This remains as your base container
 export const BaseExperience = styled.div`
 	display: flex;
 	flex-direction: column;

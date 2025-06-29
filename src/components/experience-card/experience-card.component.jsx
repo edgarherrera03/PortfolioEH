@@ -29,6 +29,7 @@ const ExperienceCard = ({ experienceCard, title, description, imgURL }) => {
 		};
 	}, []);
 
+	const flipHandler = () => setFlipped((prev) => !prev);
 	return (
 		<BaseExperience ref={ref} className={isVisible ? "visible" : ""}>
 			<CardWrapper className={isVisible ? "slide-up" : ""}>
@@ -39,13 +40,11 @@ const ExperienceCard = ({ experienceCard, title, description, imgURL }) => {
 						</div>
 						<h3>{experienceCard}</h3>
 						<span>{title}</span>
-						<Button
-							buttonType="work"
-							onClick={() => setFlipped((prev) => !prev)}>
+						<Button buttonType="work" onClick={flipHandler}>
 							View details
 						</Button>
 					</CardFront>
-					<CardBack onClick={() => setFlipped((prev) => !prev)}>
+					<CardBack onClick={flipHandler}>
 						<div className="description-box">
 							<p>{description}</p>
 						</div>

@@ -13,6 +13,7 @@ import {
 	Languages,
 	Language,
 } from "./about.styles";
+import { languageList } from "../../assets/objects-list";
 
 import ProgressBar from "../../components/progress-bar/progress-bar.component";
 
@@ -99,26 +100,12 @@ const About = () => {
 					</p>
 				</LanguageText>
 				<Languages>
-					<Language>
-						<p>French</p>
-						<ProgressBar skillType="language" percentage={95} />
-					</Language>
-					<Language>
-						<p>English</p>
-						<ProgressBar skillType="language" percentage={85} />
-					</Language>
-					<Language>
-						<p>Spanish</p>
-						<ProgressBar skillType="language" percentage={100} />
-					</Language>
-					<Language>
-						<p>Portuguese</p>
-						<ProgressBar skillType="language" percentage={50} />
-					</Language>
-					<Language>
-						<p>German</p>
-						<ProgressBar skillType="language" percentage={20} />
-					</Language>
+					{languageList.map(({ title, performance }) => (
+						<Language>
+							<p>{title}</p>
+							<ProgressBar skillType="language" percentage={performance} />
+						</Language>
+					))}
 				</Languages>
 			</LanguageContainer>
 		</div>

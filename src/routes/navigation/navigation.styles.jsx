@@ -8,15 +8,15 @@ export const NavigationContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 80px;
+	height: ${({ menuHeight }) => `${menuHeight}px`};
 	width: 100%;
 	background-color: ${backgroundDarkBlue};
 	z-index: 999;
 	padding: 0 20px;
 
-	@media (max-width: 515px) {
-		height: 60px;
-	}
+	/* @media (max-width: 515px) {
+		setMenuHeight(60);
+	} */
 `;
 
 export const PhotoContainer = styled.div`
@@ -55,49 +55,11 @@ export const NavLink = styled.span`
 	cursor: pointer;
 	color: white;
 	margin: 10px 0;
-`;
-
-export const BurgerMenu = styled.div`
-	display: none;
-	flex-direction: column;
-	cursor: pointer;
-	gap: 5px;
-	width: 25px;
-	height: 20px;
-	justify-content: center;
-
-	div {
-		width: 25px;
-		height: 3px;
-		background: white;
-		border-radius: 5px;
-		transition: all 0.3s ease;
-		transform-origin: center;
-	}
-
 	@media (max-width: 1000px) {
-		display: flex;
+		font-size: 1.4rem;
 	}
-
-	/* Animate the lines to form a cross when open */
-	div:nth-child(1) {
-		width: ${({ open }) =>
-			open ? `${Math.sqrt(25 * 25 + 13 * 13)}px` : `25px`};
-		transform: ${({ open }) =>
-			open ? "rotate(45deg) translate(5px, 5px)" : "rotate(0)"};
-	}
-
-	div:nth-child(2) {
-		opacity: ${({ open }) => (open ? 0 : 1)};
-		transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
-	}
-
-	div:nth-child(3) {
-		width: ${({ open }) =>
-			open ? `${Math.sqrt(25 * 25 + 13 * 13)}px` : `25px`};
-
-		transform: ${({ open }) =>
-			open ? "rotate(-45deg) translate(5px, -5px)" : "rotate(0)"};
+	@media (max-width: 515px) {
+		font-size: 1.2rem;
 	}
 `;
 
