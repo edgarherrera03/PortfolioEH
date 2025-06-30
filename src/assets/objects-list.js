@@ -235,7 +235,7 @@ export const projectsListEn = [
 	{
 		id: 4,
 		languageType: "portfolio",
-		title: "Web Development - Portfolio",
+		title: "Web Development - React Application",
 		link: "https://github.com/edgarherrera03/PortfolioEH",
 	},
 	{ id: 5, languageType: "vba", title: "VBA Development" },
@@ -263,7 +263,7 @@ export const projectsListFr = [
 	{
 		id: 4,
 		languageType: "portfolio",
-		title: "Développement web – Portfolio",
+		title: "Développement web – React",
 		link: "https://github.com/edgarherrera03/PortfolioEH",
 	},
 	{

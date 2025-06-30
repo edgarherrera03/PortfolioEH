@@ -1,6 +1,20 @@
 import styled from "styled-components";
 import { colorFontLightBlue } from "../../assets/_variables";
 
+export const AnimateCircle = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120px;
+	height: 120px;
+	background-color: radial-gradient(circle, #34eb7d 0%, #00000000 80%);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+	filter: blur(30px);
+	opacity: 0.6;
+`;
+
 export const IntroContainer = styled.div`
 	display: flex;
 	flex-flow: column;

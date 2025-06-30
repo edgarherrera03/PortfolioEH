@@ -1,6 +1,6 @@
 import Button from "../../components/button/button.component";
 import SwitchButton from "../../components/switch-button/switch-button-language";
-import { IntroContainer, TitleContainer } from "./home.styles";
+import { IntroContainer, TitleContainer, AnimateCircle } from "./home.styles";
 import { TypeAnimation } from "react-type-animation";
 import { animate } from "animejs";
 import { useEffect, useRef } from "react";
@@ -78,22 +78,7 @@ const Home = () => {
 				overflow: "hidden",
 				backgroundColor: "#0f0f0f",
 			}}>
-			<div
-				ref={squareRef}
-				style={{
-					position: "absolute",
-					top: "50%",
-					left: "50%",
-					width: "120px",
-					height: "120px",
-					background: "radial-gradient(circle, #34eb7d 0%, #00000000 80%)",
-					borderRadius: "50%",
-					transform: "translate(-50%, -50%)",
-					zIndex: 0,
-					filter: "blur(30px)",
-					opacity: 0.6,
-				}}
-			/>
+			<AnimateCircle ref={squareRef} />
 			<IntroContainer>
 				<TitleContainer>
 					<h1>

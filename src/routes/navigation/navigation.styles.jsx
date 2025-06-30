@@ -13,10 +13,6 @@ export const NavigationContainer = styled.div`
 	background-color: ${backgroundDarkBlue};
 	z-index: 999;
 	padding: 0 20px;
-
-	/* @media (max-width: 515px) {
-		setMenuHeight(60);
-	} */
 `;
 
 export const PhotoContainer = styled.div`
@@ -43,6 +39,9 @@ export const NavLinks = styled.div`
 	align-items: center;
 	width: 60%;
 
+	@media (max-width: 1150px) {
+		width: 70%;
+	}
 	@media (max-width: 1000px) {
 		display: none;
 	}
