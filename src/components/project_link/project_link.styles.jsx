@@ -39,7 +39,7 @@ export const BaseProject = styled.div`
 
 	@media (max-width: 500px) {
 		width: 225px;
-		height: 325px;
+		height: 24rem;
 	}
 `;
 

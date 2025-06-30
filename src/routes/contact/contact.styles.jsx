@@ -57,6 +57,7 @@ export const FormTitle = styled.div`
 		font-weight: 700;
 		font-family: "Montserrat", sans-serif;
 		letter-spacing: 1.5px;
+		margin-bottom: 0.7rem;
 	}
 	@media (max-width: 1050px) {
 		flex-direction: row;

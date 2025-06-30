@@ -6,10 +6,14 @@ import {
 	MobileMenu,
 } from "./navigation.styles";
 
-import { navigationMenuList } from "../../assets/objects-list";
+import {
+	navigationMenuListEn,
+	navigationMenuListFr,
+} from "../../assets/objects-list";
 import BurgerMenu from "../../components/burger-menu/burger-menu.component";
 import { useMenu } from "../../context/mobile/menu.context";
 import { useEffect } from "react";
+import { useLanguage } from "../../context/language/language.context";
 
 const scrollToTop = () => {
 	window.scrollTo({
@@ -20,6 +24,7 @@ const scrollToTop = () => {
 
 const Navigation = () => {
 	const { isMenuOpen, setIsMenuOpen, menuHeight, setMenuHeight } = useMenu();
+	const { language } = useLanguage();
 
 	const handleNavClick = (id) => {
 		scrollToSection(id);
@@ -60,18 +65,38 @@ const Navigation = () => {
 				/>
 				<BurgerMenu />
 				<NavLinks>
-					{navigationMenuList.map((menuOption) => (
-						<NavLink onClick={() => handleNavClick(menuOption.id)}>
-							{menuOption.title}
-						</NavLink>
-					))}
+					{language === "en"
+						? navigationMenuListEn.map((menuOption) => (
+								<NavLink
+									key={menuOption.title}
+									onClick={() => handleNavClick(menuOption.id)}>
+									{menuOption.title}
+								</NavLink>
+						  ))
+						: navigationMenuListFr.map((menuOption) => (
+								<NavLink
+									key={menuOption.title}
+									onClick={() => handleNavClick(menuOption.id)}>
+									{menuOption.title}
+								</NavLink>
+						  ))}
 				</NavLinks>
 				<MobileMenu $open={isMenuOpen}>
-					{navigationMenuList.map((menuOption) => (
-						<NavLink onClick={() => handleNavClick(menuOption.id)}>
-							{menuOption.title}
-						</NavLink>
-					))}
+					{language === "en"
+						? navigationMenuListEn.map((menuOption) => (
+								<NavLink
+									key={menuOption.title}
+									onClick={() => handleNavClick(menuOption.id)}>
+									{menuOption.title}
+								</NavLink>
+						  ))
+						: navigationMenuListFr.map((menuOption) => (
+								<NavLink
+									key={menuOption.title}
+									onClick={() => handleNavClick(menuOption.id)}>
+									{menuOption.title}
+								</NavLink>
+						  ))}
 				</MobileMenu>
 			</NavigationContainer>
 		</div>

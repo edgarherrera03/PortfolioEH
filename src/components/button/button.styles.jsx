@@ -12,7 +12,7 @@ export const BaseButton = styled.button`
 	height: 50px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
-	padding: 0 20px 0 20px;
+	padding: 0 15px 0 15px;
 	font-size: 15px;
 	background-color: ${buttonBackground};
 	color: white;
@@ -30,7 +30,7 @@ export const BaseButton = styled.button`
 		height: 2.6rem;
 		font-size: 0.9rem;
 		line-height: 2.6rem;
-		padding: 0 1rem 0 1rem;
+		padding: 0 0.6rem 0 0.6rem;
 	}
 `;
 
@@ -51,7 +51,7 @@ export const WorksButton = styled(BaseButton)`
 	background-color: ${buttonBackground};
 	color: ${BackgroundLight};
 	border-radius: 5px;
-	width: 170px;
+	width: 180px;
 	padding: 0 5px;
 	height: 40px;
 	display: flex;

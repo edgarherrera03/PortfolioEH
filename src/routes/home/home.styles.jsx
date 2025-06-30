@@ -37,10 +37,12 @@ export const TitleContainer = styled.div`
 	}
 
 	& .ChangingTitle {
+		display: inline; /* behave like text */
 		color: ${colorFontLightBlue};
-		justify-items: center;
 		font-weight: 600;
 		font-size: 2.5rem;
+		line-height: 1.3;
+
 		@media (max-width: 900px) {
 			font-size: 1.9rem;
 		}
@@ -50,7 +52,13 @@ export const TitleContainer = styled.div`
 		}
 
 		@media (max-width: 515px) {
-			font-size: 1rem;
+			font-size: 1.2rem;
+		}
+
+		.TypeWrapper {
+			display: inline-block;
+			white-space: pre-line; /* allows \n to create line breaks */
+			max-width: 100%;
 		}
 	}
 `;

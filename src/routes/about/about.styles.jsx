@@ -81,6 +81,7 @@ export const Info = styled.div`
 	& span {
 		font-weight: 700;
 		margin: 0 20px 0 0;
+		white-space: nowrap;
 	}
 `;
 

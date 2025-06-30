@@ -26,7 +26,25 @@ const Home = () => {
 		a.click();
 		document.body.removeChild(a);
 	};
-
+	const staticText = language === "en" ? "I am " : "Je suis un ";
+	const sequences =
+		language === "en"
+			? [
+					"a Computer engineering student",
+					1000,
+					"",
+					500,
+					"an Innovation management student",
+					1000,
+			  ]
+			: [
+					"Étudiant en Ingénierie informatique",
+					1000,
+					"",
+					500,
+					"Étudiant en Management de l'innovation",
+					1000,
+			  ];
 	useEffect(() => {
 		const square = squareRef.current;
 		const container = containerRef.current;
@@ -78,28 +96,24 @@ const Home = () => {
 			/>
 			<IntroContainer>
 				<TitleContainer>
-					<h1>Hi, I'm Edgar.</h1>
-					<span
-						className="ChangingTitle"
-						style={{ display: "flex", alignItems: "center" }}>
-						I am a&nbsp;
-						<TypeAnimation
-							sequence={[
-								"Computer engineering student",
-								1000,
-								"",
-								500,
-								"Innovation management student",
-								1000,
-							]}
-							speed={50}
-							repeat={Infinity}
-							style={{ color: "#34eb7d", display: "inline-block" }} // customize color here
-						/>
+					<h1>
+						{language === "en" ? "Hi, I'm Edgar." : "Bonjour, je suis Edgar."}
+					</h1>
+					<span className="ChangingTitle">
+						{staticText}
+						<span className="TypeWrapper">
+							<TypeAnimation
+								key={language}
+								sequence={sequences}
+								speed={50}
+								repeat={Infinity}
+								style={{ color: "#34eb7d", display: "inline" }}
+							/>
+						</span>
 					</span>
 				</TitleContainer>
 				<Button buttonType="base" onClick={handleDownload}>
-					Download Resume
+					{language === "en" ? "Download Resume" : "Télécharger mon CV"}
 				</Button>
 				<SwitchButton />
 			</IntroContainer>

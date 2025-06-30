@@ -11,9 +11,11 @@ import {
 	ScreenHeader,
 	FormTitle,
 } from "./contact.styles";
+import { useLanguage } from "../../context/language/language.context";
 
 const Contact = () => {
 	const formRef = useRef();
+	const { language } = useLanguage();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -54,28 +56,68 @@ const Contact = () => {
 					</ScreenHeader>
 					<Form ref={formRef} onSubmit={sendEmail}>
 						<FormTitle>
-							<span>CONTACT</span>
-							<span>
-								<span
-									style={{
-										textDecoration: "underline",
-										textUnderlineOffset: "15px",
-									}}>
-									M
-								</span>
-								E
-							</span>
+							{language === "en" ? (
+								<>
+									<span>CONTACT</span>
+									<span>
+										<span
+											style={{
+												textDecoration: "underline",
+												textUnderlineOffset: "15px",
+											}}>
+											M
+										</span>
+										E
+									</span>
+								</>
+							) : (
+								<>
+									<span>
+										<span
+											style={{
+												textDecoration: "underline",
+												textUnderlineOffset: "15px",
+											}}>
+											M
+										</span>
+										E
+									</span>
+									<span>CONTACTER</span>
+								</>
+							)}
 						</FormTitle>
 						<FormTextAreas>
 							<InfoSenderContainer>
-								<input type="text" name="name" required placeholder="Name" />
-								<input type="email" name="email" required placeholder="Email" />
+								{language === "en" ? (
+									<input type="text" name="name" required placeholder="Name" />
+								) : (
+									<input type="text" name="name" required placeholder="Nom" />
+								)}
+								{language === "en" ? (
+									<input
+										type="email"
+										name="email"
+										required
+										placeholder="Email"
+									/>
+								) : (
+									<input
+										type="email"
+										name="email"
+										required
+										placeholder="Mail"
+									/>
+								)}
 							</InfoSenderContainer>
-							<input type="text" name="subject" placeholder="Subject" />
+							{language === "en" ? (
+								<input type="text" name="subject" placeholder="Subject" />
+							) : (
+								<input type="text" name="subject" placeholder="Sujet" />
+							)}
 							<textarea name="message" required placeholder="Message" />
 							<ButtonContainer>
 								<Button type="submit" buttonType="contact">
-									Submit
+									{language === "en" ? "Submit" : "Envoyer"}
 								</Button>
 							</ButtonContainer>
 						</FormTextAreas>

@@ -41,7 +41,7 @@ export const skillList = [
 	},
 ];
 
-export const navigationMenuList = [
+export const navigationMenuListEn = [
 	{
 		id: "about",
 		title: "About me",
@@ -68,7 +68,34 @@ export const navigationMenuList = [
 	},
 ];
 
-export const languageList = [
+export const navigationMenuListFr = [
+	{
+		id: "about",
+		title: "Qui suis-je ?",
+	},
+	{
+		id: "education",
+		title: "Éducation",
+	},
+	{
+		id: "experiences",
+		title: "Expériences",
+	},
+	{
+		id: "skills",
+		title: "Compétences",
+	},
+	{
+		id: "portfolio",
+		title: "Portfolio",
+	},
+	{
+		id: "contact",
+		title: "Contact",
+	},
+];
+
+export const languageListEn = [
 	{
 		title: "French",
 		performance: 100,
@@ -91,7 +118,30 @@ export const languageList = [
 	},
 ];
 
-export const experiencesList = [
+export const languageListFr = [
+	{
+		title: "Français",
+		performance: 100,
+	},
+	{
+		title: "Anglais",
+		performance: 85,
+	},
+	{
+		title: "Espagnol",
+		performance: 100,
+	},
+	{
+		title: "Portugais",
+		performance: 50,
+	},
+	{
+		title: "Allemand",
+		performance: 20,
+	},
+];
+
+export const experiencesListEn = [
 	{
 		company: "Lollier Ingénierie",
 		title: "Assistant Project Manager",
@@ -124,5 +174,101 @@ export const experiencesList = [
 – Served as the primary liaison between student associations and the University administration, facilitating communication, fostering collaboration, and ensuring that student groups received necessary support and resources.
 – Developed strong leadership, teamwork, and organizational skills through managing both people and projects in a dynamic, fast-paced environment.`,
 		imgURL: "https://i.ibb.co/xK017z6p/bde-logo.jpg",
+	},
+];
+
+export const experiencesListFr = [
+	{
+		company: "Lollier Ingénierie",
+		title: "Assistant Chef de Projet",
+		description: `J'ai travaillé au développement de divers outils informatiques dans le domaine de la gestion de projet et de l'administration :
+
+– Développement d’un plugin pour le logiciel open-source QGIS afin d’automatiser l’extraction de données cartographiques. J’ai principalement codé cet outil en Python, en utilisant des bibliothèques comme requests, BeautifulSoup, etc. Ensuite, j’ai travaillé sur la mise en forme des données extraites pour les exporter au format Word (bibliothèque python-docx).
+
+– Développement d’un outil de gestion dans Microsoft Excel pour centraliser les données des devis générés par les différentes agences de l’entreprise. Le code a été écrit en VBA (Visual Basic for Applications), un langage intégré à Excel.
+
+– Utilisation du logiciel open-source WebODM pour développer un script permettant aux utilisateurs de traiter et fusionner des images prises par drone, afin d’obtenir une orthophoto.`,
+		imgURL: "https://i.ibb.co/wFRQt9dy/lollier-logo.png",
+	},
+	{
+		company: "Pathé Cinéma",
+		title: "Assistant Chef de Projet",
+		description: `Suivi de l’évolution des produits numériques (App/Web) :
+– Réalisation de tests approfondis des applications mobiles et web pour vérifier que tous les éléments étaient à jour et fonctionnaient correctement.
+– Tests multiplateformes et multi-appareils avant chaque nouvelle version pour assurer la compatibilité et les performances sur différents supports (iOS, Android, tablettes, navigateurs desktop, etc.).
+– Analyse des retours utilisateurs et commentaires afin d’identifier les problèmes récurrents et les points d’amélioration en matière d’expérience utilisateur.
+– Rédaction claire des rapports de bugs, avec une priorisation basée sur l’impact utilisateur et les délais de développement.`,
+		imgURL: "https://i.ibb.co/7xvY3tf0/pathe-logo.webp",
+	},
+	{
+		company: "BDE EMSE CGCP",
+		title: "Président",
+		description: `Président du Bureau des Étudiants :
+– Gestion du budget des activités étudiantes en veillant à optimiser l’allocation des fonds pour maximiser le nombre et la qualité des événements organisés durant l’année universitaire.
+– Encadrement et coordination d’une équipe chargée de planifier, organiser et exécuter divers événements étudiants, tout en équilibrant les coûts et les ressources.
+– Expérience concrète en gestion financière : élaboration de budgets, suivi des dépenses et reporting pour assurer la transparence.
+– Interlocuteur principal entre les associations étudiantes et l’administration, facilitant la communication et le soutien logistique.
+– Développement de compétences solides en leadership, travail d’équipe et gestion de projet dans un environnement dynamique.`,
+		imgURL: "https://i.ibb.co/xK017z6p/bde-logo.jpg",
+	},
+];
+
+export const projectsListEn = [
+	{
+		id: 1,
+		languageType: "hospital",
+		title: "Hospital Managament Data Encryption",
+		link: "https://github.com/edgarherrera03/Hospital-Management-System",
+	},
+	{
+		id: 2,
+		languageType: "automation",
+		title: "QGIS automation",
+		link: "https://github.com/edgarherrera03/OutilsExtractions",
+	},
+	{
+		id: 3,
+		languageType: "crypto",
+		title: "Cryptography - Encryption algorithm",
+		link: "https://github.com/edgarherrera03/ASCON128",
+	},
+	{
+		id: 4,
+		languageType: "portfolio",
+		title: "Web Development - Portfolio",
+		link: "https://github.com/edgarherrera03/PortfolioEH",
+	},
+	{ id: 5, languageType: "vba", title: "VBA Development" },
+];
+
+export const projectsListFr = [
+	{
+		id: 1,
+		languageType: "hospital",
+		title: "Chiffrement des données d’un système hospitalier",
+		link: "https://github.com/edgarherrera03/Hospital-Management-System",
+	},
+	{
+		id: 2,
+		languageType: "automation",
+		title: "Automatisation QGIS",
+		link: "https://github.com/edgarherrera03/OutilsExtractions",
+	},
+	{
+		id: 3,
+		languageType: "crypto",
+		title: "Cryptographie – Algorithme de chiffrement",
+		link: "https://github.com/edgarherrera03/ASCON128",
+	},
+	{
+		id: 4,
+		languageType: "portfolio",
+		title: "Développement web – Portfolio",
+		link: "https://github.com/edgarherrera03/PortfolioEH",
+	},
+	{
+		id: 5,
+		languageType: "vba",
+		title: "Développement VBA",
 	},
 ];

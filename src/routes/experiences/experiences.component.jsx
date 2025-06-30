@@ -8,18 +8,22 @@ import {
 } from "./experiences.styles";
 import ProjectButton from "../../components/switch-project-button/project-button.component";
 import { useRef, useState, useEffect } from "react";
-import { experiencesList } from "../../assets/objects-list";
+import {
+	experiencesListEn,
+	experiencesListFr,
+} from "../../assets/objects-list";
+import { useLanguage } from "../../context/language/language.context";
 
 const Experiences = () => {
 	const [startIndex, setStartIndex] = useState(0);
 	const [cardsPerPage] = useState(1);
 	const [cardWidth, setCardWidth] = useState(22); // in rem
-
+	const { language } = useLanguage();
 	const scrollRef = useRef();
 
 	const handleScroll = (direction) => {
 		setStartIndex((prev) => {
-			const max = experiencesList.length - cardsPerPage;
+			const max = experiencesListEn.length - cardsPerPage;
 			if (direction === "right") return Math.min(prev + 1, max);
 			if (direction === "left") return Math.max(prev - 1, 0);
 			return prev;
@@ -45,24 +49,38 @@ const Experiences = () => {
 	return (
 		<div id="experiences">
 			<ExperiencesContainer>
-				<TitleSection>Experiences</TitleSection>
+				<TitleSection>
+					{language === "en" ? "Experiences" : "Expériences"}
+				</TitleSection>
 
 				<ScrollWrapper>
 					<Experience
 						ref={scrollRef}
 						startindex={startIndex}
 						cardwidth={cardWidth}>
-						{experiencesList.map((experience) => (
-							<ExperienceCard
-								key={experience.company}
-								experienceCard={experience.company}
-								title={experience.title}
-								description={experience.description}
-								imgURL={experience.imgURL}
-								startIndex={startIndex}
-								cardWidth={cardWidth}
-							/>
-						))}
+						{language === "en"
+							? experiencesListEn.map((experience) => (
+									<ExperienceCard
+										key={experience.company}
+										experienceCard={experience.company}
+										title={experience.title}
+										description={experience.description}
+										imgURL={experience.imgURL}
+										startIndex={startIndex}
+										cardWidth={cardWidth}
+									/>
+							  ))
+							: experiencesListFr.map((experience) => (
+									<ExperienceCard
+										key={experience.company}
+										experienceCard={experience.company}
+										title={experience.title}
+										description={experience.description}
+										imgURL={experience.imgURL}
+										startIndex={startIndex}
+										cardWidth={cardWidth}
+									/>
+							  ))}
 					</Experience>
 				</ScrollWrapper>
 
@@ -75,7 +93,7 @@ const Experiences = () => {
 					<ProjectButton
 						buttonType="right"
 						onClick={() => handleScroll("right")}
-						disabled={startIndex >= experiencesList.length - cardsPerPage}
+						disabled={startIndex >= experiencesListEn.length - cardsPerPage}
 					/>
 				</ScrollButtons>
 			</ExperiencesContainer>

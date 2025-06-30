@@ -9,39 +9,14 @@ import {
 	SlidingProjects,
 } from "./portfolio.styles";
 import ProjectButton from "../../components/switch-project-button/project-button.component";
-
-const projects = [
-	{
-		id: 1,
-		languageType: "hospital",
-		title: "Hospital Managament Data Encryption",
-		link: "https://github.com/edgarherrera03/Hospital-Management-System",
-	},
-	{
-		id: 2,
-		languageType: "automation",
-		title: "QGIS automation",
-		link: "https://github.com/edgarherrera03/OutilsExtractions",
-	},
-	{
-		id: 3,
-		languageType: "crypto",
-		title: "Cryptography - Encryption algorithm",
-		link: "https://github.com/edgarherrera03/ASCON128",
-	},
-	{
-		id: 4,
-		languageType: "portfolio",
-		title: "Web Development - Portfolio",
-		link: "https://github.com/edgarherrera03/PortfolioEH",
-	},
-	{ id: 5, languageType: "vba", title: "VBA Development" },
-];
+import { projectsListEn, projectsListFr } from "../../assets/objects-list";
+import { useLanguage } from "../../context/language/language.context";
 
 const Portfolio = () => {
 	const [startIndex, setStartIndex] = useState(0);
 	const [cardsPerPage, setCardsPerPage] = useState(3);
 	const [cardWidth, setCardWidth] = useState(350);
+	const { language } = useLanguage();
 
 	useEffect(() => {
 		const updateLayout = () => {
@@ -69,7 +44,7 @@ const Portfolio = () => {
 
 	const handleScroll = (direction) => {
 		setStartIndex((prev) => {
-			const max = projects.length - cardsPerPage;
+			const max = projectsListEn.length - cardsPerPage;
 			if (direction === "right") return Math.min(prev + 1, max);
 			if (direction === "left") return Math.max(prev - 1, 0);
 			return prev;
@@ -89,20 +64,33 @@ const Portfolio = () => {
 						/>
 						<ProjectsWrapper>
 							<SlidingProjects $startindex={startIndex} $cardwidth={cardWidth}>
-								{projects.map((project) => (
-									<ProjectLink
-										key={project.id}
-										languageType={project.languageType}
-										title={project.title}
-										onClick={() => project.link && window.open(project.link)}
-									/>
-								))}
+								{language === "en"
+									? projectsListEn.map((project) => (
+											<ProjectLink
+												key={project.id}
+												languageType={project.languageType}
+												title={project.title}
+												onClick={() =>
+													project.link && window.open(project.link)
+												}
+											/>
+									  ))
+									: projectsListFr.map((project) => (
+											<ProjectLink
+												key={project.id}
+												languageType={project.languageType}
+												title={project.title}
+												onClick={() =>
+													project.link && window.open(project.link)
+												}
+											/>
+									  ))}
 							</SlidingProjects>
 						</ProjectsWrapper>
 						<ProjectButton
 							buttonType="right"
 							onClick={() => handleScroll("right")}
-							disabled={startIndex >= projects.length - cardsPerPage}
+							disabled={startIndex >= projectsListEn.length - cardsPerPage}
 						/>
 					</ProjectContainer>
 				</ProjectsContainer>
